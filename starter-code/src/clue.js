@@ -1,152 +1,57 @@
 // Characters
 
-const mrGreen = {
-  first_name:   "Jacob",
-  last_name:    "Green",
-  color:        "green",
-  description:  "He has a lot of connections",
-  age:          45,
-  image:        "https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg",
-  occupation:   "Entrepreneur"
+function Character(first,last,color,description,age,image,occupation) {
+  this.first_name = first;
+  this.last_name = last;
+  this.color = color;
+  this.description = description;
+  this.age = age;
+  this.image = image;
+  this.occupation = occupation;
 }
 
+const mrGreen = new Character("Jacob","Green","green","He has a lot of connections",45, "https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg","Entrepreneur");
+const drOrchid = new Character("Doctor","Orchid","white","PhD in plant toxicology. Adopted daughter of Mr. Boddy",26,"http://www.radiotimes.com/uploads/images/Original/111967.jpg", "Scientist");
+const profPlum = new Character("Victor","Plum","purple","Billionare video game designer",22,"https://metrouk2.files.wordpress.com/2016/07/professor-plum.jpg","Designer");
+const missScarlet = new Character("Kasandra","Scarlet","red","She is an A-list movie star with a dark past",31,"https://metrouk2.files.wordpress.com/2016/07/miss-scarlett.jpg","Actor");
+const mrsPeacock = new Character("Eleanor","Peacock","blue","She is from a wealthy family and uses her status and money to earn popularity",36,"https://metrouk2.files.wordpress.com/2016/07/mrs-peacock.jpg","Socialité");
+const mrMustard = new Character("Jack","Mustard","yellow","He is a former football player who tries to get by on his former glory",62,"https://metrouk2.files.wordpress.com/2016/07/colonel-mustard.jpg","Retired Football player");
 
-const drOrchid = {
-  first_name:   "Doctor",
-  last_name:    "Orchid",
-  color:        "white",
-  description:  "PhD in plant toxicology. Adopted daughter of Mr. Boddy",
-  age:          26,
-  image:        "http://www.radiotimes.com/uploads/images/Original/111967.jpg",
-  ocupation:   "Scientist"
-}
-
-const profPlum = {
-  first_name:   "Victor",
-  last_name:    "Plum",
-  color:        "purple",
-  description:  "Billionare video game designer",
-  age:          22,
-  image:        "https://metrouk2.files.wordpress.com/2016/07/professor-plum.jpg",
-  occupation:   "Designer"
-}
-
-const missScarlet = {
-  first_name:   "Kasandra",
-  last_name:    "Scarlet",
-  color:        "red",
-  description:  "She is an A-list movie star with a dark past",
-  age:          31,
-  image:        "https://metrouk2.files.wordpress.com/2016/07/miss-scarlett.jpg",
-  occupation:   "Actor"
-}
-
-const mrsPeacock = {
-  first_name:   "Eleanor",
-  last_name:    "Peacock",
-  color:        "blue",
-  description:  "She is from a wealthy family and uses her status and money to earn popularity",
-  age:          36,
-  image:        "https://metrouk2.files.wordpress.com/2016/07/mrs-peacock.jpg",
-  occupation:   "Socialité" 
-}
-
-const mrMustard = {
-  first_name:   "Jack",
-  last_name:    "Mustard",
-  color:        "yellow",
-  description:  "He is a former football player who tries to get by on his former glory",
-  age:          62,
-  image:        "https://metrouk2.files.wordpress.com/2016/07/colonel-mustard.jpg",
-  occupation:   "Retired Football player"
-}
 
 // Weapons
-
-const rope = {
-  name: "rope",
-  weight: 10
+function Weapon(name,weight) {
+  this.name = name;
+  this.weight = weight;
 }
-const knife = {
-  name: "knife",
-  weight: 8
-}
-const candlestick = {
-  name: "candlestick",
-  weight: 2
-}
-const dumbell = {
-  name: "dumbbell",
-  weight: 30
-}
-const poison = {
-  name: "poison",
-  weight: 2
-}
-const axe = {
-  name: "axe",
-  weight: 15
-}
-const bat = {
-  name: "bat",
-  weight: 13
-}
-const trophy = {
-  name: "trophy",
-  weight: 25
-}
-const pistol = {
-  name: "pistol",
-  weight: 20
-}
+const rope = new Weapon("rope",10);
+const knife = new Weapon("knife",8);
+const candlestick = new Weapon("candlestick",2);
+const dumbell = new Weapon("dumbbell",30);
+const poison = new Weapon("poisson",2);
+const axe = new Weapon("axe",15);
+const bat = new Weapon("bat",13);
+const trophy = new Weapon("trophy",25);
+const pistol = new Weapon("pistol",20);
 
 // Rooms
-
-const dinningRoom = {
-  name: "Dinning Room",
+function Room(name) {
+  this.name = name;
 }
-const conservatory = {
-  name: "Conservatory"
-}
-const kitchen = {
-  name: "Kitchen"
-}
-const study = {
-  name: "Study"
-}
-const library = {
-  name: "Library"
-}
-const billiardRoom = {
-  name: "Billiard Room"
-}
-const lounge = {
-  name: "Lounge"
-}
-const ballroom = {
-  name: "Ballroom"
-}
-const hall = {
-  name: "Hall"
-}
-const spa = {
-  name: "Spa"
-}
-const livingRoom = {
-  name: "Living Room"
-}
-const observatory = {
-  name: "Observatory"
-}
-const theater = {
-  name: "Theater"
-}
-const guestHouse = {
-  name: "Guest House"
-}
-const patio = {
-  name: "Patio"
-}
+const dinningRoom = new Room("Dinning Room");
+const conservatory = new Room("Conservatory");
+const kitchen = new Room("Kitchen");
+const study = new Room("Study");
+const library = new Room("Library");
+const billiardRoom = new Room("Billiard Room");
+const lounge = new Room("Lounge");
+const ballroom = new Room("Ballroom");
+const hall = new Room("Hall");
+const spa = new Room("Spa");
+const livingRoom = new Room("Living Room");
+const observatory = new Room( "Observatory");
+const theater = new Room("Theater");
+const guestHouse = new Room("Guest House");
+const patio = new Room("Patio");
 
 
 // Characters Collection
@@ -161,16 +66,24 @@ roomsArray.push(dinningRoom,conservatory,kitchen, study, library,billiardRoom,lo
 const weaponsArray = [];
 weaponsArray.push(rope,knife,candlestick,dumbell,poison,axe,bat,trophy,pistol)
 
-const randomSelector = anArray => {
-  let i = Math.floor(Math.random() * anArray.length);
+class Game {
+  constructor(arr, arr1 ,arr2) {
+    this.characters = arr;
+    this.weapons = arr1;
+    this.rooms = arr2;
+  }
 
-  return anArray[i];
+  randomSelector(anArray) {
+    let i = Math.floor(Math.random() * anArray.length);
+    return anArray[i];
+  }
+
+  pickAndRevealMistery() {
+    let misteryEnvelope = [this.randomSelector(this.characters),this.randomSelector(this.weapons),this.randomSelector(this.rooms)];
+    return `${misteryEnvelope[0].first_name} ${misteryEnvelope[0].last_name} killed Mr.Boddy using the ${misteryEnvelope[1].name} in the ${misteryEnvelope[2].name}!!!!`;
+   }
+
 }
 
-const pickMistery = () => [randomSelector(charactersArray),randomSelector(weaponsArray),randomSelector(roomsArray)];
-
-const revealMistery = misteryEnvelope => `${misteryEnvelope[0].first_name} ${misteryEnvelope[0].last_name} killed Mr.Boddy using the ${misteryEnvelope[1].name} in the ${misteryEnvelope[2].name}!!!!`;
-
-const misteryEnv = pickMistery();
-
-console.log(revealMistery(misteryEnv));
+const firstGame = new Game(charactersArray,weaponsArray,roomsArray);
+console.log(firstGame.pickAndRevealMistery());
